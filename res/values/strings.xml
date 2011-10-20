@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Aether\'s Notebook Azure Appender</string>
+    
+    <string name="configuration.openid.providers">
+        [
+            {
+                \"name\" : \"Google\",
+                \"type\" : \"aethers.notebook.azure.appender.DirectOpenIdProvider\",
+                \"url\" : \"https://www.google.com/accounts/o8/id\"
+            },
+            {
+                \"name\" : \"Yahoo\",
+                \"type\" : \"aethers.notebook.azure.appender.DirectOpenIdProvider\",
+                \"url\" : \"http://yahoo.com/\"
+            },
+            {
+                \"name\" : \"OpenID\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://\",
+                \"suffix\" : \"\"
+            },
+            {
+                \"name\" : \"AOL\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://openid.aol.com/\",
+                \"suffix\" : \"\"
+            },
+            {
+                \"name\" : \"MyOpenID\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://\",
+                \"suffix\" : \".myopenid.com/\"
+            },
+            {
+                \"name\" : \"Flickr\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://flickr.com/\",
+                \"suffix\" : \"/\"
+            },
+            {
+                \"name\" : \"Technorati\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://technorati.com/people/technorati/\",
+                \"suffix\" : \"/\"
+            },
+            {
+                \"name\" : \"Wordpress\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://\",
+                \"suffix\" : \".wordpress.com\"
+            },
+            {
+                \"name\" : \"Blogger\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://\",
+                \"suffix\" : \".blogspot.com/\"
+            },
+            {
+                \"name\" : \"LiveJournal\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://\",
+                \"suffix\" : \".livejournal.com\"
+            },
+            {
+                \"name\" : \"ClaimID\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://claimid.com/\",
+                \"suffix\" : \"\"
+            },
+            {
+                \"name\" : \"Verisign\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://\",
+                \"suffix\" : \".pip.verisignlabs.com/\"
+            },
+            {
+                \"name\" : \"Vidoop\",
+                \"type\" : \"aethers.notebook.azure.appender.IndirectOpenIdProvider\",
+                \"prefix\" : \"http://\",
+                \"suffix\" : \".myvidoop.com/\"
+            }
+        ]
+    </string>
+        
+    <string name="Preferences_connectionType">Preferences.connectionType</string>
+    <string name="Preferences_connectionType_default">Manual</string>
+    
+    <string name="Preferences_url">Preferences.url</string>
+    <string name="Preferences_url_default">http://aethersnotebook.cloudapp.net/Receiver/Index</string>
+    
+    <string name="Preferences_maxFileSize">Preferences.maxFileSize</string>
+    <string name="Preferences_maxFileSize_default">1024</string>
+    
+    <string name="Preferences_logDirectory">Preferences.logDirectory</string>
+    <string name="Preferences_logDirectory_default">/.Azure</string>
+    
+    <string name="Preferences_deleteUploadedFiles">Preferences.deleteUploadedFiles</string>
+    <string name="Preferences_deleteUploadedFiles_default">true</string>
+    
+    <string name="Preferences_maxFiles">Preferences.maxFiles</string>
+    <string name="Preferences_maxFiles_default">-1</string>
+    
+    <string name="Preferences_openID">Preferences.openID</string>
+    <string name="Preferences_openID_default"></string>
+    
+    <string name="Preferences_secret">Preferences.secret</string>
+    <string name="Preferences_secret_default"></string>
+</resources>

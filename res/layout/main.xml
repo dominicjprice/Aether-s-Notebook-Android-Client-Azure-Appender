@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        
+    <TextView 
+            android:text="Aether's Notebook\nAzure Appender"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+    <Button
+            android:id="@+id/install_button"
+            android:text="Install"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:visibility="gone"
+            android:onClick="install" />
+            
+    <Button
+            android:id="@+id/uninstall_button"
+            android:text="Uninstall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:visibility="gone"
+            android:onClick="uninstall" />
+                      
+</LinearLayout>
