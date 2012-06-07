@@ -4,6 +4,10 @@
 
     <PreferenceCategory
             android:title="Uploader Appender Preferences">
+        <aethers.notebook.core.ui.NonPersistingButtonPreference
+                android:key="RegisterButton"
+                android:title="Register"
+                android:summary="Register with the server" />
         <ListPreference
                 android:key="@string/Preferences_connectionType"
                 android:title="Upload when"

@@ -57,8 +57,6 @@ implements Runnable
         IDENTIFIER.setConfigurable(true);
         IDENTIFIER.setDescription("Pushes logs to an Azure server");
         IDENTIFIER.setName("Azure Appender");
-        IDENTIFIER.setPackageName("aethers.notebook.azure.appender");
-        IDENTIFIER.setServiceClass(AzureAppenderService.class.getName());
         IDENTIFIER.setVersion(1);
     }
     
@@ -121,6 +119,10 @@ implements Runnable
         @Override
         public void run() 
         {
+            if(configuration.getOpenID() == null
+                    || configuration.getOpenID().equals(""))
+                return;
+            
             boolean delete = configuration.isDeleteUploadedFiles();
             File uploaddir = new File(currentDirectory, "uploaded");
             uploaddir.mkdir();
@@ -262,6 +264,13 @@ implements Runnable
             {
                 if(action.getID().equals(ACTION_UPLOAD.getID()))
                     handler.post(new Upload());
+            }
+
+            @Override
+            public AppenderServiceIdentifier getIdentifier()
+            throws RemoteException 
+            {
+                return IDENTIFIER;
             }
         };
         
@@ -465,6 +474,9 @@ implements Runnable
     
     private void checkUploadConditions()
     {
+        if(configuration.getOpenID() == null
+                || configuration.getOpenID().equals(""))
+            return;
         switch(configuration.getConnectionType())
         {
             case Manual : return;

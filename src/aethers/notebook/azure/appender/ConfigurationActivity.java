@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import aethers.notebook.azure.appender.Configuration.ConnectionType;
 import aethers.notebook.core.ui.IntegerPreferenceChangeListener;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -18,6 +19,18 @@ extends PreferenceActivity
         super.onCreate(savedInstanceState);
         getPreferenceManager().setSharedPreferencesName(Configuration.SHARED_PREFERENCES_NAME);
         addPreferencesFromResource(R.xml.configuration);
+        
+        Preference register = findPreference("RegisterButton");
+        register.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener()
+        {
+            @Override
+            public boolean onPreferenceClick(Preference preference) 
+            {
+                Intent i = new Intent(ConfigurationActivity.this, OpenIdProviderListActivity.class);
+                startActivity(i);
+                return true;
+            }
+        });
         
         ListPreference connTypes = (ListPreference)findPreference(
                 getString(R.string.Preferences_connectionType));
